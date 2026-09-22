@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Al Sahara | Menú</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-circle">A</span>
+            <span>AL SAHARA</span>
+        </div>
+
+        <nav class="navbar">
+
+            <a href="index.php">Inicio</a>
+
+            <a href="menu.php" class="active">
+                Menú
+            </a>
+
+            <a href="registro.php">
+                Regístrate aquí
+            </a>
+
+            <a href="carrito.php">
+                Carrito
+            </a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <a href="carrito.php" class="cart-button">
+
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path d="M6 8h12l1 12H5L6 8Z"></path>
+                    <path d="M9 8a3 3 0 0 1 6 0"></path>
+                </svg>
+
+            </a>
+
+            <a href="menu.php" class="order-button">
+                Pide aquí
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= CATEGORÍAS ================= -->
+
+        <section class="menu-categories">
+
+            <a href="#shawarmas" class="menu-category">
+
+                <img
+                    src="img/shawarma.png"
+                    alt="Shawarma"
+                >
+
+                <h3>Shawarma</h3>
+
+                <span>5 opciones</span>
+
+            </a>
+
+
+            <a href="#falafel" class="menu-category">
+
+                <img
+                    src="img/falafel.png"
+                    alt="Falafel"
+                >
+
+                <h3>Falafel</h3>
+
+                <span>5 opciones</span>
+
+            </a>
+
+
+            <a href="#hummus" class="menu-category">
+
+                <img
+                    src="img/hummus.png"
+                    alt="Hummus"
+                >
+
+                <h3>Hummus</h3>
+
+                <span>5 opciones</span>
+
+            </a>
+
+
+            <a href="#kebabs" class="menu-category">
+
+                <img
+                    src="img/kebab.png"
+                    alt="Kebab Tradicional"
+                >
+
+                <h3>Kebab Tradicional</h3>
+
+                <span>5 opciones</span>
+
+            </a>
+
+
+            <a href="#agregados" class="menu-category">
+
+                <img
+                    src="img/agregados.png"
+                    alt="Agregados"
+                >
+
+                <h3>Agregados</h3>
+
+                <span>7 opciones</span>
+
+            </a>
+
+
+            <a href="#postres" class="menu-category">
+
+                <img
+                    src="img/postres.png"
+                    alt="Postres"
+                >
+
+                <h3>Postres</h3>
+
+                <span>6 opciones</span>
+
+            </a>
+
+        </section>
+
+
+        <!-- ================= SHAWARMAS ================= -->
+
+        <section class="menu-section" id="shawarmas">
+
+            <h2>Shawarmas</h2>
+
+            <div class="menu-products">
+
+                <!-- PRODUCTO 1 -->
+
+                <article class="menu-product">
+
+                    <img
+                        src="img/shawarma pollo.png"
+                        alt="Shawarma de pollo"
+                    >
+
+                    <div class="menu-product-info">
+
+                        <h3>
+                            Shawarma de pollo
+                        </h3>
+
+                        <p>
+                            Muslo de pollo picante tallado y cocinado
+                            en una rodada en pan saj recién horneado
+                            con tumd de ajo y pepino picado.
+                        </p>
+
+                    </div>
+
+                    <div class="menu-product-bottom">
+
+                        <strong>$6.500</strong>
+                        <button
+                            class="add-button"
+                            data-product="Shawarma de pollo"
+                            data-price="6500"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 2 -->
+
+                <article class="menu-product">
+
+                    <img
+                        src="img/shawarma pollo.png"
+                        alt="Shawarma de pollo"
+                    >
+
+                    <div class="menu-product-info">
+
+                        <h3>
+                            Shawarma de pollo
+                        </h3>
+
+                        <p>
+                            Muslo de pollo picante tallado y cocinado
+                            en una rodada en pan saj recién horneado
+                            con tumd de ajo y pepino picado.
+                        </p>
+
+                    </div>
+
+                    <div class="menu-product-bottom">
+
+                        <strong>$6.500</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Shawarma de pollo"
+                            data-price="6500"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 3 -->
+
+                <article class="menu-product">
+
+                    <img
+                        src="img/shawarma pollo.png"
+                        alt="Shawarma de pollo"
+                    >
+
+                    <div class="menu-product-info">
+
+                        <h3>
+                            Shawarma de pollo
+                        </h3>
+
+                        <p>
+                            Muslo de pollo picante tallado y cocinado
+                            en una rodada en pan saj recién horneado
+                            con tumd de ajo y pepino picado.
+                        </p>
+
+                    </div>
+
+                    <div class="menu-product-bottom">
+
+                        <strong>$6.500</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Shawarma de pollo"
+                            data-price="6500"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 4 -->
+
+                <article class="menu-product">
+
+                    <img
+                        src="img/Shawarma pollo.png"
+                        alt="Shawarma de pollo"
+                    >
+
+                    <div class="menu-product-info">
+
+                        <h3>
+                            Shawarma de pollo
+                        </h3>
+
+                        <p>
+                            Muslo de pollo picante tallado y cocinado
+                            en una rodada en pan saj recién horneado
+                            con tumd de ajo y pepino picado.
+                        </p>
+
+                    </div>
+
+                    <div class="menu-product-bottom">
+
+                        <strong>$6.500</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Shawarma de pollo"
+                            data-price="6500"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ================= FALAFEL ================= -->
+
+        <section class="menu-section" id="falafel">
+
+            <h2>Falafel</h2>
+
+            <div class="menu-products">
+
+                <!-- PRODUCTO 1 -->
+
+                <article class="menu-product">
+
+                    <img
+                        src="img/falafel.png"
+                        alt="Falafel"
+                    >
+
+                    <div class="menu-product-info">
+
+                        <h3>
+                            Falafel
+                        </h3>
+
+                        <p>
+                            Crujientes bocados de garbanzo y hierbas frescas,
+                            sazonados con especias levantinas y fritos hasta
+                            lograr un exterior dorado, servidos con salsas cremosas
+                            cremosas y vegetales frescos.
+                        </p>
+
+                    </div>
+
+                    <div class="menu-product-bottom">
+
+                        <strong>$8.000</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Falafel"
+                            data-price="8000"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 1 -->
+
+                <article class="menu-product">
+
+                    <img
+                        src="img/falafel.png"
+                        alt="Falafel"
+                    >
+
+                    <div class="menu-product-info">
+
+                        <h3>
+                            Falafel
+                        </h3>
+
+                        <p>
+                            Crujientes bocados de garbanzo y hierbas frescas,
+                            sazonados con especias levantinas y fritos hasta
+                            lograr un exterior dorado, servidos con salsas cremosas
+                            cremosas y vegetales frescos.
+                        </p>
+
+                    </div>
+
+                    <div class="menu-product-bottom">
+
+                        <strong>$8.000</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Falafel"
+                            data-price="8000"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 1 -->
+
+                <article class="menu-product">
+
+                    <img
+                        src="img/falafel.png"
+                        alt="Falafel"
+                    >
+
+                    <div class="menu-product-info">
+
+                        <h3>
+                            Falafel
+                        </h3>
+
+                        <p>
+                            Crujientes bocados de garbanzo y hierbas frescas,
+                            sazonados con especias levantinas y fritos hasta
+                            lograr un exterior dorado, servidos con salsas cremosas
+                            cremosas y vegetales frescos.
+                        </p>
+
+                    </div>
+
+                    <div class="menu-product-bottom">
+
+                        <strong>$8.000</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Falafel"
+                            data-price="8000"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 1 -->
+
+                <article class="menu-product">
+
+                    <img
+                        src="img/falafel.png"
+                        alt="Falafel"
+                    >
+
+                    <div class="menu-product-info">
+
+                        <h3>
+                            Falafel
+                        </h3>
+
+                        <p>
+                            Crujientes bocados de garbanzo y hierbas frescas,
+                            sazonados con especias levantinas y fritos hasta
+                            lograr un exterior dorado, servidos con salsas cremosas
+                            cremosas y vegetales frescos.
+                        </p>
+
+                    </div>
+
+                    <div class="menu-product-bottom">
+
+                        <strong>$8.000</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Falafel"
+                            data-price="8000"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ================= KEBABS ================= -->
+
+        <section class="menu-section" id="kebabs">
+
+            <h2>Kebabs tradicionales</h2>
+
+            <div class="menu-products">
+
+                <!-- PRODUCTO 1 -->
+
+                <article class="menu-product">
+
+                    <img
+                        src="img/kebab cordero.png"
+                        alt="Kebab de cordero picante"
+                    >
+
+                    <div class="menu-product-info">
+
+                        <h3>
+                            Kebab de cordero picante
+                        </h3>
+
+                        <p>
+                            Cubos delicados de hombro de cordero
+                            alimentado con hierba marinado en cardamomo,
+                            orgánico, coronados con nueces de pino tostadas,
+                            aceite extra virgen de oliva y carne picante.
+                        </p>
+
+                    </div>
+
+                    <div class="menu-product-bottom">
+
+                        <strong>$7.500</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Plato de royal Hummus"
+                            data-price="7500"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <!-- PRODUCTO 2 -->
+
+                <article class="menu-product">
+
+                    <img
+                        src="img/kebab cordero.png"
+                        alt="Kebab de cordero picante"
+                    >
+
+                    <div class="menu-product-info">
+
+                        <h3>
+                            Kebab de cordero picante
+                        </h3>
+
+                        <p>
+                            Cubos delicados de hombro de cordero
+                            alimentado con hierba marinado en cardamomo,
+                            orgánico, coronados con nueces de pino tostadas,
+                            aceite extra virgen de oliva y carne picante.
+                        </p>
+
+                    </div>
+
+                    <div class="menu-product-bottom">
+
+                        <strong>$7.500</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Kebab de cordero picante"
+                            data-price="7500"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <!-- PRODUCTO 3 -->
+
+                <article class="menu-product">
+
+                    <img
+                        src="img/kebab cordero.png"
+                        alt="Kebab de cordero picante"
+                    >
+
+                    <div class="menu-product-info">
+
+                        <h3>
+                            Kebab de cordero picante
+                        </h3>
+
+                        <p>
+                            Cubos delicados de hombro de cordero
+                            alimentado con hierba marinado en cardamomo,
+                            orgánico, coronados con nueces de pino tostadas,
+                            aceite extra virgen de oliva y carne picante.
+                        </p>
+
+                    </div>
+
+                    <div class="menu-product-bottom">
+
+                        <strong>$7.500</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Kebab de cordero picante"
+                            data-price="7500"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <!-- PRODUCTO 4s -->
+
+                <article class="menu-product">
+
+                    <img
+                        src="img/kebab cordero.png"
+                        alt="Kebab de cordero picante"
+                    >
+
+                    <div class="menu-product-info">
+
+                        <h3>
+                            Kebab de cordero picante
+                        </h3>
+
+                        <p>
+                            Cubos delicados de hombro de cordero
+                            alimentado con hierba marinado en cardamomo,
+                            orgánico, coronados con nueces de pino tostadas,
+                            aceite extra virgen de oliva y carne picante.
+                        </p>
+
+                    </div>
+
+                    <div class="menu-product-bottom">
+
+                        <strong>$7.500</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Kebab de cordero picante"
+                            data-price="7500"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+        <section id="hummus" class="empty-category"></section>
+        <section id="agregados" class="empty-category"></section>
+        <section id="postres" class="empty-category"></section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+
+                    <span class="logo-circle">A</span>
+
+                    <span>AL SAHARA</span>
+
+                </div>
+
+                <p>
+                    Traemos el rico sabor de la herencia Levantina
+                    directo a tu mesa. Cocinado por expertos.
+                </p>
+
+                <div class="socials">
+
+                    <a href="#">◎</a>
+                    <a href="#">f</a>
+                    <a href="#">𝕏</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Menú</h3>
+
+                <a href="#">Shawarma Especial</a>
+                <a href="#">Falafel Crujiente</a>
+                <a href="#">Hummus Cremosos</a>
+                <a href="#">Kebabs Tradicionales</a>
+                <a href="#">Dulces levantinos</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Horarios & Contacto</h3>
+
+                <p>
+                    Lunes a jueves: 11:00 – 23:00
+                </p>
+
+                <p>
+                    Viernes: 13:00 – 00:00
+                </p>
+
+                <p>
+                    alsaharacontacto@gmail.com
+                </p>
+
+                <p>
+                    +56 (9) 1234 5678
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Al Sahara. Todos los derechos reservados.
+            </span>
+
+            <div>
+
+                <a href="#">
+                    Políticas de Privacidad
+                </a>
+
+                <span> · </span>
+
+                <a href="#">
+                    Términos y servicios
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

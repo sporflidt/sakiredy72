@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Al Sahara | Regístrate</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/registro.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <span class="logo-circle">A</span>
+
+        <span>AL SAHARA</span>
+
+    </div>
+
+
+    <nav class="navbar">
+
+        <a href="index.php">
+            Inicio
+        </a>
+
+        <a href="menu.php">
+            Menú
+        </a>
+
+        <a href="registro.php" class="active">
+            Regístrate aquí
+        </a>
+
+        <a href="carrito.php">
+            Carrito
+        </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <a href="carrito.php" class="cart-button">
+
+            <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+
+                <path d="M6 8h12l1 12H5L6 8Z"></path>
+
+                <path d="M9 8a3 3 0 0 1 6 0"></path>
+
+            </svg>
+
+        </a>
+
+
+        <a href="menu.php" class="order-button">
+            Pide aquí
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     REGISTRO
+===================================================== -->
+
+<main class="register-page">
+
+
+    <!-- =================================================
+         INFORMACIÓN
+    ================================================== -->
+
+    <section class="register-intro">
+
+        <span class="register-eyebrow">
+            LA MESA DEL SAHARA
+        </span>
+
+
+        <h1>
+            Únete al festín y
+            consigue recompensas
+            Royal
+        </h1>
+
+
+        <p class="register-description">
+
+            Crea una cuenta hoy. Guarda los detalles de entrega,
+            trackea tus banquetes a tiempo real y reúne recompensas
+            para conseguir aperitivos y postres gratis.
+
+        </p>
+
+
+        <!-- BENEFICIO 1 -->
+
+        <div class="register-benefit">
+
+            <div class="benefit-icon">
+                🎁
+            </div>
+
+            <div>
+
+                <h3>
+                    Gánate un Baklava gratis al registrarte.
+                </h3>
+
+                <p>
+                    Consigue una box complementaria con tu primera orden.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BENEFICIO 2 -->
+
+        <div class="register-benefit">
+
+            <div class="benefit-icon">
+                ⌖
+            </div>
+
+            <div>
+
+                <h3>
+                    Ubicaciones personalizables
+                </h3>
+
+                <p>
+                    Guarda tu oficina o casa para entregas gratis.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGEN -->
+
+        <div class="register-image">
+
+            <img
+                src="img/especias.png"
+                alt="Especias levantinas"
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FORMULARIO
+    ================================================== -->
+
+    <section class="register-form-container">
+
+        <form class="register-form">
+
+
+            <h2>
+                Regístrate
+            </h2>
+
+
+            <p class="form-subtitle">
+                Empieza tu viaje culinario con nosotros hoy.
+            </p>
+
+
+            <!-- NOMBRE -->
+
+            <div class="form-group">
+
+                <label for="nombre">
+                    Nombre completo
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="ej. Sultan Al-Sahara"
+                >
+
+            </div>
+
+
+            <!-- CORREO -->
+
+            <div class="form-group">
+
+                <label for="correo">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="sultanlevantino@gmail.com"
+                >
+
+            </div>
+
+
+            <!-- TELEFONO -->
+
+            <div class="form-group">
+
+                <label for="telefono">
+                    Número de teléfono
+                </label>
+
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="+56 (9) 6767 6420"
+                >
+
+            </div>
+
+
+            <!-- CONTRASEÑA -->
+
+            <div class="form-group">
+
+                <label for="password">
+                    Contraseña
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="••••••••••••••"
+                >
+
+            </div>
+
+
+            <!-- DIRECCIÓN -->
+
+            <div class="form-group">
+
+                <label for="direccion">
+                    Dirección de entrega
+                </label>
+
+                <input
+                    type="text"
+                    id="direccion"
+                    name="direccion"
+                    placeholder="Calle, Número, Departamento, Comuna"
+                >
+
+            </div>
+
+
+            <!-- BOTÓN -->
+
+            <button
+                type="submit"
+                class="register-button"
+            >
+
+                Crea una cuenta gratuita
+
+            </button>
+
+
+            <!-- REDES -->
+
+            <div class="social-register">
+
+                <span>
+                    O regístrate usando:
+                </span>
+
+
+                <div class="social-register-buttons">
+
+                    <button type="button">
+
+                        <span>⊗</span>
+
+                        Google
+
+                    </button>
+
+
+                    <button type="button">
+
+                        <strong>f</strong>
+
+                        Facebook
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOGIN -->
+
+            <p class="already-account">
+
+                ¿Ya tienes una cuenta?
+
+                <a href="#">
+                    Inicia sesión
+                </a>
+
+            </p>
+
+
+        </form>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+
+    <div class="footer-content">
+
+
+        <!-- MARCA -->
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+
+                <span class="logo-circle">
+                    A
+                </span>
+
+                <span>
+                    AL SAHARA
+                </span>
+
+            </div>
+
+
+            <p>
+                Traemos el rico sabor de la herencia Levantina
+                directo a tu mesa. Cocinado por expertos.
+            </p>
+
+
+            <div class="socials">
+
+                <!-- Instagram -->
+
+                <a href="#" aria-label="Instagram">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <rect
+                            x="4"
+                            y="4"
+                            width="16"
+                            height="16"
+                            rx="5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <circle
+                            cx="17.5"
+                            cy="6.5"
+                            r="1"
+                            fill="currentColor"
+                        />
+
+                    </svg>
+
+                </a>
+
+
+                <!-- Facebook -->
+
+                <a href="#" aria-label="Facebook">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path
+                            fill="currentColor"
+                            d="M13.5 21v-8h2.7l.4-3h-3.1V8.1
+                            c0-.9.3-1.5 1.5-1.5h1.7V4
+                            c-.3 0-1.3-.1-2.5-.1
+                            -2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.7v8h3.5z"
+                        />
+
+                    </svg>
+
+                </a>
+
+
+                <!-- X -->
+
+                <a href="#" aria-label="X">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path
+                            fill="currentColor"
+                            d="M18.9 3H22l-6.8 7.8L23.2 21h-6.4
+                            l-5-6.2L6.4 21H3.3l7.3-8.3L2.9 3h6.6
+                            l4.5 5.6L18.9 3zm-1.1 16h1.8L8.4 4.9H6.5L17.8 19z"
+                        />
+
+                    </svg>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MENÚ -->
+
+        <div class="footer-column">
+
+            <h3>
+                Menú
+            </h3>
+
+            <a href="#">
+                Shawarma Especial
+            </a>
+
+            <a href="#">
+                Falafel Crujiente
+            </a>
+
+            <a href="#">
+                Hummus Cremosos
+            </a>
+
+            <a href="#">
+                Kebabs Tradicionales
+            </a>
+
+            <a href="#">
+                Dulces levantinos
+            </a>
+
+        </div>
+
+
+        <!-- CONTACTO -->
+
+        <div class="footer-column">
+
+            <h3>
+                Horarios & Contacto
+            </h3>
+
+            <p>
+                Lunes a jueves: 11:00 – 23:00
+            </p>
+
+            <p>
+                Viernes: 13:00 – 00:00
+            </p>
+
+            <p>
+                alsaharacontacto@gmail.com
+            </p>
+
+            <p>
+                +56 (9) 1234 5678
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Al Sahara. Todos los derechos reservados.
+        </span>
+
+
+        <div>
+
+            <a href="#">
+                Políticas de Privacidad
+            </a>
+
+            <span> · </span>
+
+            <a href="#">
+                Términos y servicios
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

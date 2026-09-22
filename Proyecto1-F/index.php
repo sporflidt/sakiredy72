@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Al Sahara | Cocina Levantina</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-circle">A</span>
+            <span>AL SAHARA</span>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.php" class="active">Inicio</a>
+            <a href="menu.php">Menú</a>
+            <a href="registro.php">Regístrate aquí</a>
+            <a href="carrito.php">Carrito</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <a href="carrito.php" class="cart-button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M6 8h12l1 12H5L6 8Z"></path>
+                    <path d="M9 8a3 3 0 0 1 6 0"></path>
+                </svg>
+            </a>
+
+            <a href="menu.php" class="order-button">
+                Pide aquí
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HOME ================= -->
+
+        <section class="home">
+
+            <div class="home-content">
+
+                <span class="eyebrow">
+                    BIEN COCINADO · BIEN ENTREGADO
+                </span>
+
+                <h1>
+                    Cultura levantina a<br>
+                    la puerta de tu casa
+                </h1>
+
+                <p>
+                    Degusta el intenso sabor de nuestros recién preparados
+                    manjares, hummus molido a mano y los kebabs cocinados
+                    a leña. Hechos con nuestra generacional receta familiar
+                    y entregado en arcilla térmica premium a la temperatura
+                    perfecta.
+                </p>
+
+                <a href="menu.php" class="primary-button">
+                    Explora nuestro festín
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <div class="home-image-container">
+
+                <img
+                    src="img/home.png"
+                    alt="Mesa con comida levantina"
+                    class="home-image"
+                >
+
+                <div class="delivery-card">
+
+                    <div class="delivery-icon">
+                        ◷
+                    </div>
+
+                    <div>
+                        <strong>Delivery rápido</strong>
+                        <small>Entrega en menos de 35 minutos.</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORÍAS ================= -->
+
+        <section class="categories">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    EXPLORA EL ZOCO
+                </span>
+
+                <h2>
+                    Generaciones de sabor
+                </h2>
+
+                <p>
+                    Selecciona una categoría para ver las delicateses
+                    tradicionales hechas con las más finas especias,
+                    aceites orgánicos y carnes de producción local.
+                </p>
+
+            </div>
+
+
+            <div class="category-list">
+
+                <a href="menu.php?categoria=shawarma" class="category-card">
+
+                    <img src="img/shawarma.png" alt="Shawarma">
+
+                    <h3>Shawarma</h3>
+
+                    <span>5 opciones</span>
+
+                </a>
+
+
+                <a href="menu.php?categoria=falafel" class="category-card">
+
+                    <img src="img/falafel.png" alt="Falafel">
+
+                    <h3>Falafel</h3>
+
+                    <span>5 opciones</span>
+
+                </a>
+
+
+                <a href="menu.php?categoria=hummus" class="category-card">
+
+                    <img src="img/hummus.png" alt="Hummus">
+
+                    <h3>Hummus</h3>
+
+                    <span>5 opciones</span>
+
+                </a>
+
+
+                <a href="menu.php?categoria=kebab" class="category-card">
+
+                    <img src="img/kebab.png" alt="Kebab">
+
+                    <h3>Kebab Tradicional</h3>
+
+                    <span>5 opciones</span>
+
+                </a>
+
+
+                <a href="menu.php?categoria=agregados" class="category-card">
+
+                    <img src="img/agregados.png" alt="Agregados">
+
+                    <h3>Agregados</h3>
+
+                    <span>7 opciones</span>
+
+                </a>
+
+
+                <a href="menu.php?categoria=postres" class="category-card">
+
+                    <img src="img/postres.png" alt="Postres">
+
+                    <h3>Postres</h3>
+
+                    <span>6 opciones</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECOMENDACIONES ================= -->
+
+        <section class="recommendations">
+
+            <div class="recommendation-heading">
+
+                <span class="eyebrow">
+                    ESPECIALIDADES DE LA CASA
+                </span>
+
+                <h2>
+                    Las recomendaciones de Al Sahara
+                </h2>
+
+                <p>
+                    Creaciones elegidas especialmente que representan
+                    la historia culinaria del Levantino.
+                </p>
+
+            </div>
+
+
+            <div class="products">
+
+
+                <!-- PRODUCTO 1 -->
+
+                <article class="product-card">
+
+                    <img
+                        src="img/kebab cordero.png"
+                        alt="Kebab de cordero picante"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>
+                            Kebab de cordero picante
+                        </h3>
+
+                        <p>
+                            Cubos delicados de hombro de cordero
+                            alimentado con hierba marinado en cardamomo,
+                            zumaque y miel silvestre, triturados lentamente
+                            sobre carbones.
+                        </p>
+
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>$8.000</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Kebab de cordero picante"
+                            data-price="8000"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 2 -->
+
+                <article class="product-card">
+
+                    <img
+                        src="img/shawarma pollo.png"
+                        alt="Shawarma de pollo"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>
+                            Shawarma de pollo
+                        </h3>
+
+                        <p>
+                            Muslo de pollo picante tallado y cocinado
+                            en una ro­dada en pan saj recién horneado
+                            con tumd de ajo y pepino picado.
+                        </p>
+
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>$6.500</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Shawarma de pollo"
+                            data-price="6500"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 3 -->
+
+                <article class="product-card">
+
+                    <img
+                        src="img/hummus royal.png"
+                        alt="Plato de royal Hummus"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>
+                            Plato de royal Hummus
+                        </h3>
+
+                        <p>
+                            Guisantes cremosos batidos a mano con Tahini
+                            orgánico, coronados con nueces de pino tostadas,
+                            aceite extra virgen de oliva y carne picante.
+                        </p>
+
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>$7.500</strong>
+
+                        <button
+                            class="add-button"
+                            data-product="Plato de royal Hummus"
+                            data-price="7500"
+                        >
+                            + &nbsp; Añadir al carro
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FRANJA ================= -->
+
+        <section class="quality-banner">
+
+            <div class="quality-text">
+
+                <h2>
+                    Sabores preservados en arcilla.
+                </h2>
+
+                <p>
+                    Entregamos guisos, brochetas y pan plano dentro
+                    de arcilla térmica que mantiene el calor, preservando
+                    el sabor horneado y textura crocante.
+                </p>
+
+            </div>
+
+
+            <div class="quality-stats">
+
+                <div>
+                    <strong>100%</strong>
+                    <span>Halal & Fresco</span>
+                </div>
+
+                <div>
+                    <strong>&lt;35m</strong>
+                    <span>Tiempo de entrega estimado.</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <!-- LOGO -->
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+
+                    <span class="logo-circle">A</span>
+
+                    <span>AL SAHARA</span>
+
+                </div>
+
+                <p>
+                    Traemos el rico sabor de la herencia Levantina
+                    directo a tu mesa. Cocinado por expertos.
+                </p>
+
+                <div class="socials">
+
+                    <a href="#">◎</a>
+                    <a href="#">f</a>
+                    <a href="#">𝕏</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- MENÚ -->
+
+            <div class="footer-column">
+
+                <h3>Menú</h3>
+
+                <a href="#">Shawarma Especial</a>
+                <a href="#">Falafel Crujiente</a>
+                <a href="#">Hummus Cremosos</a>
+                <a href="#">Kebabs Tradicionales</a>
+                <a href="#">Dulces levantinos</a>
+
+            </div>
+
+
+            <!-- CONTACTO -->
+
+            <div class="footer-column">
+
+                <h3>Horarios & Contacto</h3>
+
+                <p>
+                    Lunes a jueves: 13:00 – 23:00
+                </p>
+
+                <p>
+                    Viernes: 13:00 – 00:00
+                </p>
+
+                <p>
+                    alsaharacontacto@gmail.com
+                </p>
+
+                <p>
+                    +56 (9) 1234 5678
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Al Sahara. Todos los derechos reservados.
+            </span>
+
+            <div>
+                <a href="#">Políticas de Privacidad</a>
+                <span> · </span>
+                <a href="#">Términos y servicios</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
