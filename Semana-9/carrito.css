@@ -1,0 +1,22 @@
+import pytest
+
+playwright = pytest.importorskip("playwright.sync_api")
+from playwright.sync_api import sync_playwright
+
+
+def test_frontend_login_y_cuenta():
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+        try:
+            page.goto("http://127.0.0.1:8000/login.html", wait_until="networkidle")
+        except Exception:
+            browser.close()
+            pytest.skip("El Gateway + Frontend no está levantado en http://127.0.0.1:8000")
+
+        page.fill("#username", "ana")
+        page.fill("#login-password", "1234")
+        page.click("button[type='submit']")
+        page.wait_for_timeout(500)
+        assert page.url.endswith("/index.html")
+        browser.close()
