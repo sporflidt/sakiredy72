@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Sahara | Mi cuenta</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .account-page{min-height:560px;padding:50px 5%;background:var(--cream)}
+        .account-grid{max-width:1000px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+        .account-card{background:white;border-radius:14px;padding:25px}
+        .account-card h1,.account-card h2{color:var(--burgundy);font-family:Georgia,"Times New Roman",serif}
+        .account-card h1{margin-bottom:10px;font-size:34px}.account-card h2{margin-bottom:15px;font-size:22px}
+        .account-message{color:#756b68;margin-bottom:18px}.account-list{list-style:none;display:grid;gap:10px}
+        .account-item{padding:12px;border:1px solid var(--border);border-radius:8px;display:flex;justify-content:space-between;gap:15px}
+        .admin-delete{border:0;background:var(--burgundy);color:#fff;border-radius:5px;padding:6px 9px;cursor:pointer}
+        @media(max-width:750px){.account-grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="logo"><span class="logo-circle">A</span><span>AL SAHARA</span></div>
+    <nav class="navbar">
+        <a href="index.html">Inicio</a><a href="menu.html">Menú</a><a href="registro.html">Regístrate aquí</a><a href="carrito.html">Carrito</a>
+    </nav>
+    <div class="header-actions"><a href="carrito.html" class="cart-button">🛒</a><div id="auth-area"></div></div>
+</header>
+
+<main class="account-page">
+    <div class="account-grid">
+        <section class="account-card">
+            <h1>Mi cuenta</h1>
+            <p id="identity" class="account-message">Cargando sesión...</p>
+            <button type="button" class="order-button" id="logout">Cerrar sesión</button>
+        </section>
+        <section class="account-card">
+            <h2>Productos protegidos</h2>
+            <ul id="products" class="account-list"><li>Cargando...</li></ul>
+        </section>
+        <section class="account-card">
+            <h2>Mis órdenes</h2>
+            <ul id="orders" class="account-list"><li>Cargando...</li></ul>
+        </section>
+        <section class="account-card">
+            <h2>Administración</h2>
+            <p class="account-message">Solo un usuario con rol <strong>admin</strong> puede eliminar productos.</p>
+            <ul id="admin-products" class="account-list"><li>Cargando...</li></ul>
+        </section>
+    </div>
+</main>
+
+<script>
+const API = "";
+
+function esc(v) {
+    return String(v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
+} // mismo origen: el Gateway sirve el frontend
+
+async function request(path, options = {}) {
+    return fetch(API + path, {
+        ...options,
+        credentials: "include",
+        headers: { ...(options.headers || {}), "Content-Type": "application/json" }
+    });
+}
+
+function showError(element, response) {
+    if (response.status === 401) {
+        element.innerHTML = '<li>Tu sesión no es válida. <a href="login.html">Inicia sesión</a>.</li>';
+    } else if (response.status === 403) {
+        element.innerHTML = '<li>No tienes permisos para esta operación.</li>';
+    } else {
+        element.innerHTML = '<li>No se pudo cargar la información.</li>';
+    }
+}
+
+async function loadAccount() {
+    const me = await request("/auth/me");
+    if (!me.ok) { window.location.href = "login.html"; return; }
+    const identity = await me.json();
+    document.querySelector("#identity").textContent = `${identity.username} · ${identity.roles.join(", ")}`;
+
+    const products = document.querySelector("#products");
+    let productList = [];
+    const productsResponse = await request("/api/products");
+    if (!productsResponse.ok) { showError(products, productsResponse); }
+    else {
+        const data = await productsResponse.json();
+        productList = Array.isArray(data.products) ? data.products : [];
+        products.innerHTML = productList.length
+            ? productList.map(p => `<li class="account-item"><span>${esc(p.name)}</span><strong>$${Number(p.price).toLocaleString("es-CL")}</strong></li>`).join("")
+            : "<li>No hay productos disponibles.</li>";
+    }
+
+    const orders = document.querySelector("#orders");
+    const ordersResponse = await request("/api/orders");
+    if (!ordersResponse.ok) { showError(orders, ordersResponse); }
+    else {
+        const data = await ordersResponse.json();
+        const orderList = Array.isArray(data.orders) ? data.orders : [];
+        orders.innerHTML = orderList.length
+            ? orderList.map(o => `<li class="account-item"><span>Orden #${esc(o.id)}</span><strong>${esc(o.status)}</strong></li>`).join("")
+            : "<li>No tienes órdenes.</li>";
+    }
+
+    const admin = document.querySelector("#admin-products");
+    const adminList = Array.isArray(productList) ? productList : [];
+    admin.innerHTML = adminList.length
+        ? adminList.map(p => `<li class="account-item"><span>Producto #${esc(p.id)}: ${esc(p.name)}</span><button class="admin-delete" data-id="${esc(p.id)}">Eliminar</button></li>`).join("")
+        : "<li>No hay productos para administrar.</li>";
+}
+
+document.querySelector("#logout").addEventListener("click", async () => {
+    await request("/auth/logout", { method: "POST" });
+    window.location.href = "login.html";
+});
+
+document.addEventListener("click", async (event) => {
+    const button = event.target.closest(".admin-delete");
+    if (!button) return;
+    const response = await request(`/api/products/${button.dataset.id}`, { method: "DELETE" });
+    if (response.ok) button.closest("li").remove();
+    else alert(response.status === 403 ? "No tienes rol admin." : "No se pudo eliminar el producto.");
+});
+
+loadAccount();
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
