@@ -1,0 +1,73 @@
+services:
+  vault:
+    image: hashicorp/vault:1.20
+    command: vault server -dev -dev-root-token-id=dev-only-token -dev-listen-address=0.0.0.0:8200
+    environment:
+      VAULT_DEV_ROOT_TOKEN_ID: dev-only-token
+    ports:
+      - "8200:8200"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "-", "http://127.0.0.1:8200/v1/sys/health"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  vault-init:
+    image: hashicorp/vault:1.20
+    depends_on:
+      vault:
+        condition: service_healthy
+    environment:
+      VAULT_ADDR: http://vault:8200
+      VAULT_TOKEN: dev-only-token
+      BACKEND_SHARED_SECRET: gateway-api-secret-456
+      AUTH_INTROSPECTION_SECRET: gateway-auth-secret-789
+    entrypoint: ["/bin/sh", "-c"]
+    command: >
+      "vault kv put secret/gateway
+      backend_shared_secret=$$BACKEND_SHARED_SECRET
+      auth_introspection_secret=$$AUTH_INTROSPECTION_SECRET"
+
+  auth:
+    build: .
+    command: uvicorn backend.auth_service.main:app --host 0.0.0.0 --port 8100
+    depends_on:
+      vault-init:
+        condition: service_completed_successfully
+    environment:
+      VAULT_ADDR: http://vault:8200
+      VAULT_TOKEN: dev-only-token
+    ports:
+      - "8100:8100"
+
+  backend:
+    build: .
+    command: uvicorn backend.backend_api.main:app --host 0.0.0.0 --port 9000
+    depends_on:
+      vault-init:
+        condition: service_completed_successfully
+    environment:
+      VAULT_ADDR: http://vault:8200
+      VAULT_TOKEN: dev-only-token
+    ports:
+      - "9000:9000"
+
+  gateway:
+    build: .
+    command: uvicorn backend.gateway.main:app --host 0.0.0.0 --port 8000
+    depends_on:
+      auth:
+        condition: service_started
+      backend:
+        condition: service_started
+      vault-init:
+        condition: service_completed_successfully
+    environment:
+      VAULT_ADDR: http://vault:8200
+      VAULT_TOKEN: dev-only-token
+      AUTH_URL: http://auth:8100
+      BACKEND_URL: http://backend:9000
+      FRONTEND_ORIGIN: http://127.0.0.1:8000
+      COOKIE_SECURE: "false"
+    ports:
+      - "8000:8000"
